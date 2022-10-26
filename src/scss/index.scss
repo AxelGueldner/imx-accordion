@@ -1,0 +1,58 @@
+$color_content: #333;
+$color_lines: #999;
+
+/*************************
+ * open / close behavior
+ *************************/
+[data-imxaccordion_content]{
+  [data-imxaccordion_item]:is([data-imxaccordion_item='active'], :focus-within) & {
+    display: block;
+  }
+  [data-imxaccordion_item]:not([data-imxaccordion_item='active'], :focus-within) & {
+    display: none;
+  }
+}
+
+/*************************
+ * mock styles
+ *************************/
+[data-imxaccordion][data-imxaccordion_mock-styles]{
+  border-top: 1px $color_lines solid;
+}
+
+[data-imxaccordion][data-imxaccordion_mock-styles]{
+
+  [data-imxaccordion_item]{
+    border-bottom: 1px $color_lines solid;
+    display: flex;
+    flex-direction: column;
+  }
+
+  [data-imxaccordion_title]{
+    align-items: center;
+    column-gap: 10px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    font: 400 normal 18px/24px Arial, sans-serif;
+    justify-content: space-between;
+    margin: 0;
+    padding: 15px 0;
+  }
+
+  [data-imxaccordion_title]::after{
+    content: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNS4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkViZW5lXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMTcuMDA4cHgiIGhlaWdodD0iOS42MTVweCIgdmlld0JveD0iMCAwIDE3LjAwOCA5LjYxNSIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTcuMDA4IDkuNjE1IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGQ9Ik0xNC44MjUsMC4zNzJjMC41MDEtMC40OTYsMS4zMDctMC40OTYsMS44MDgsMGMwLjQ5NSwwLjQ4OCwwLjUwMSwxLjI4NCwwLjAxNCwxLjc3OGMtMC4wMDUsMC4wMDUtMC4wMSwwLjAwOS0wLjAxNCwwLjAxNA0KCUw5LjQwOSw5LjI0M2MtMC41MDIsMC40OTYtMS4zMDksMC40OTYtMS44MTEsMEwwLjM3NSwyLjE2NGMtMC40OTQtMC40ODgtMC41LTEuMjg0LTAuMDE0LTEuNzc4QzAuMzY2LDAuMzgxLDAuMzcsMC4zNzYsMC4zNzUsMC4zNzINCgljMC41MDEtMC40OTYsMS4zMDgtMC40OTYsMS44MDgsMGw2LjMyNCw1LjgwNkwxNC44MjUsMC4zNzJ6Ii8+DQo8L3N2Zz4NCg==');
+    text-align: center;
+    transition: transform 0.25s ease;
+    width: 32px;
+  }
+
+  [data-imxaccordion_item]:is([data-imxaccordion_item='active'], :focus-within) [data-imxaccordion_title]::after {
+    transform: rotate(180deg);
+  }
+
+  [data-imxaccordion_content]{
+    font: 400 normal 14px/22px Arial, sans-serif;
+    padding: 0 0 15px 0;
+  }
+}
