@@ -1,17 +1,17 @@
 {
   "name": "imx-accordion",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "default accordions for imx projects",
   "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc && sass -c src/scss/index.scss lib/index.css",
-    "prepare" : "npm run build"
+    "prepare": "npm run build"
   },
   "author": "Axel Güldner (gueldner@infomax-it.de)",
   "license": "ISC",
-  "devDependencies": {
+  "dependencies": {
     "sass": "^1.55.0",
     "typescript": "^4.8.4"
   }
