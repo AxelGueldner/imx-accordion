@@ -4,7 +4,7 @@ infomax pattern library: standard accordion module
 ## Installing
 Currently it is only possible to install imx-accordion as a npm package:
 ```shell
-$ npm install imx-neos -g
+$ npm install imx-accordion
 ```
 
 ## Preparation
