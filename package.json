@@ -1,6 +1,6 @@
 {
   "name": "imx-accordion",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "default accordions for imx projects",
   "type": "module",
   "main": "index.js",
